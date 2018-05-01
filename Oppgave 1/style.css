@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;    
+}
+
+@keyframes bannerani {
+    0%   {left: -1000px;}
+    40%  {left: -1000px;}
+    60%  {left: 0px;}
+    100% {left: 0px;}    
+}
+
+#banner {
+    display: block;
+    width: 1000px;
+    height: 390px;
+    background-color: lightgrey;
+    overflow: hidden;
+}
+
+#bannerbilde {
+    position: relative;
+    left: -1000px;
+    animation-name: bannerani;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+audio {
+    position: relative;
+    left: 4px;
+    top: -40px;    
+}

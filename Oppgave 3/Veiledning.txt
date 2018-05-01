@@ -1,0 +1,56 @@
+//Veiledning til eksamen H15 oppgave 3 
+
+//Som dere vet og forstår kan en oppgave som denne løses på mange ulike måter. Mest spesielt i denne løsningen er kanskje utlegget av registerte fag med karakterer i <table>, dette for å få fin måte å 
+legge inn knapper for endring og sletting til hvert fag.
+
+//Du finner to, like, løsninger: Oppgave3.html med alt i ett. Og Oppg3.html med eksterne/egne .css og .js filer.
+
+//Lager referanser til HTML-elementer, som en løsning på å slippe å skrive document.getElementById("noe") så mange ganger:
+var lstFag = document.getElementById("lstFag");
+var karListe = document.getElementById("karakterListe");
+var txtKar = document.getElementById("txtKarakter");
+var btnLeggTil = document.getElementById("btnLeggTil");
+var btnBeregn = document.getElementById("btnBeregn");
+var btnBeregn = document.getElementById("btnBeregn");
+var txtTillegg = document.getElementById("txtTillegg");
+var txtInfo = document.getElementById("txtInfo");
+
+//Brukergrensesnitt for å gi karakter i fag:
+        <p>Velg fag og angi karakter (1-6)</p>
+        <select id="lstFag"></select>
+        <input id="txtKarakter" type="number" max="6" min="1" value="4"> 
+		<button id="btnLeggTil">Legg til</button> 
+
+//Array med fagnavn, som kan .......................		
+var fagArray = [
+    "Engelsk", "Geografi", "Historie Vg3",
+    "Kroppsøving Vg3", "Naturfag",
+    "Matematikk Vg1, Vg2 (eller x fag)",
+    "Norsk hovudmål, skriftleg Vg3",
+    "Norsk sidemål, skriftleg Vg3",
+    "Norsk munnleg Vg3", "Religion og etikk",
+    "Samfunnsfag i vg. opplæring",
+    "Programfag",
+    "Eksamen"
+];
+
+//.......... legges inn i nedtrekkslista lstFag slik:
+for (var i = 0; i < fagArray.length; i++) { 
+    var element = document.createElement("option");    
+    element.innerHTML = fagArray[i];
+    element.value = fagArray[i];    
+    lstFag.appendChild(element);    
+}
+
+//For å få tatt vare på fag + karakter som bruker legger inn, er array egnet:
+var karArray = [];
+//Som elementer i denne, passer det å bruke assosiative arrayer, eller objekter som vi også (og bedre) kan si. Disse kan legges på ved push (her er valgtFag og kar lest inn fra brukergrensesnittet):
+    karArray.push({fag:valgtFag, karakter:kar});
+
+	
+	
+	
+	
+	
+	
+	

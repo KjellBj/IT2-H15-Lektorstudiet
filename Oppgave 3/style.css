@@ -1,0 +1,68 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgrey;
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;    
+}
+
+#headerbilde {
+    width: 100%;
+    max-width: 1000px;
+}
+
+#skjema {    
+    border: solid 1px grey;
+    margin: 5px;
+    padding: 5px; 
+}
+
+select, input, button {    
+    margin: 6px;    
+}
+
+input {
+    width: 50px;
+}
+
+button {
+    width: 100px;
+}
+
+#btnBeregn {
+    width: 200px;
+}
+
+#karakterListe {
+    border-collapse: collapse;
+    background-color: linen;
+    box-shadow: 0px 0px 20px grey;
+    margin: 5px;
+    padding: 5px; 
+}
+
+table, th, td {
+    border: 1px solid grey;
+    
+    padding-left: 5px;
+}
+
+td {
+    width: 100px
+}
+
+.tdBred {
+    width: 300px;
+}
+
+#txtInfo {    
+    font-weight: bold;
+}
+

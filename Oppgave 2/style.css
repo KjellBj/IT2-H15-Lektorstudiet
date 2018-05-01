@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgrey;
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;    
+}
+
+#headerbilde {
+    width: 100%;
+    max-width: 1000px;
+}
+
+#skjema {
+    margin: 5px;
+    padding: 5px;
+    border: solid 1px grey;
+}
+
+#info {
+    margin: 5px;
+    padding: 5px;    
+}
+
+input {
+	display: block;
+    margin-bottom: 13px;
+}

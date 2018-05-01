@@ -1,0 +1,20 @@
+Veiledning til eksamen H15 oppgave 2 
+------------------------------------
+Du finner to, like, løsninger: Oppgave2.html med alt i ett. Og Oppg2.html med eksterne/egne .css og .js filer.
+
+Du finner også en variant med funksjon for å spare skriving av document.getElementById("id"):
+
+	function d(id){
+		return "document.getElementById(" + id + ")";
+	}
+
+I stedet for 
+	document.getElementById("btnBeregn").onclick = beregn;
+kan du da skrive
+	d("btnBeregn").onclick = beregn;
+
+PS: En annen måte å spare kjedelig skriving og økt volum på koden som kan gjøre den vanskeligere å lese, er å lage referanser til HTML-elementer; eksempel oppgave 3 der dette er brukt:
+var lstFag = document.getElementById("lstFag");
+var karListe = document.getElementById("karakterListe");
+var txtKar = document.getElementById("txtKarakter");
+var btnLeggTil = document.getElementById("btnLeggTil");

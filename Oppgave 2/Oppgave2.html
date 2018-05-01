@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 2 - Kommer du inn?</title>
+	<meta name="Author" content=""/>
+	<script>
+		window.onload = oppstart;
+
+		function oppstart(){
+			document.getElementById("btnBeregn").onclick = beregn;
+		}
+		
+		function beregn() {	
+			var snitt = parseFloat(document.getElementById("txtSnitt").value);
+			var tillegg = parseFloat(document.getElementById("txtTillegg").value);
+			var grense = parseFloat(document.getElementById("txtGrense").value);
+			
+			var brukerpoeng = snitt * 10 + tillegg;   
+			
+			if (isNaN(brukerpoeng) || isNaN(grense)) {
+				txtResultat.innerHTML = "Du må angi gyldige tall!"
+			}
+			else {
+				if (brukerpoeng >= grense) {
+					document.getElementById("txtResultat").innerHTML = "Med " + brukerpoeng + " poeng kommer du inn på studiet, gratulerer!"
+				}
+				else {
+					document.getElementById("txtResultat").innerHTML = "Med " + brukerpoeng + " poeng kommer du dessverre ikke inn på studiet."
+				}
+			}    
+		}				
+	</script>
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+
+		body {
+			background: lightgrey;
+			font-family: sans-serif;
+		}
+
+		header {
+			text-align: center;    
+		}
+
+		#headerbilde {
+			width: 100%;
+			max-width: 1000px;
+		}
+
+		#skjema {
+			margin: 5px;
+			padding: 5px;
+			border: solid 1px grey;
+		}
+
+		#info {
+			margin: 5px;
+			padding: 5px;    
+		}
+
+		input {
+			display: block;
+			margin-bottom: 13px;
+		}	
+	</style>
+</head>
+<body>
+    <header>
+        <img id="headerbilde" src="overskrift.png">;
+        <h1>Finn ut om du kommer inn på studiet!</h1>        
+    </header>
+    
+    <div id="skjema">
+    
+        <label for="txtSnitt">Angi din snittkarakter:</label>
+        <input id="txtSnitt" type="text">
+
+        <label for="txtTillegg">Angi tilleggspoeng:</label>
+        <input id="txtTillegg" type="text" value="0">
+
+        <label for="txtGrense">Angi poenggrensa:</label>
+        <input id="txtGrense" type="text" value="50">
+        
+        <button id="btnBeregn">Beregn resultatet</button>
+        
+        <h2 id="txtResultat"></h2>
+    
+    </div>
+    
+    <div id="info">
+        <h2>Poengrenser 2014</h2>    
+        <p>Lektorutdanning i historie: 50 poeng</p>
+        <p>Lektorutdanning i språkfag/engelsk: 48 poeng</p>
+    </div>
+    
+    <script src="script.js">Kan ikke kjøre javascript</script>
+
+</body>
+</html>
